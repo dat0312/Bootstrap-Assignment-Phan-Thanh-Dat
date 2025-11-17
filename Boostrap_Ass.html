@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegat - Elegant and Creative Solutions</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2ecc71;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+        }
+
+        .navbar {
+            padding: 1rem 0;
+            background: white !important;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-dark) !important;
+        }
+
+        .nav-link {
+            color: var(--text-dark) !important;
+            margin: 0 0.5rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+        }
+
+        .btn-primary:hover {
+            background-color: #27ae60;
+        }
+
+        .hero-section {
+            padding: 80px 0;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .hero-text {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .watch-video-btn {
+            background: white;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            margin-left: 1rem;
+        }
+
+        .service-card {
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+            line-height: 1.2;
+        }
+
+        .section-title-wrapper {
+            text-align: center;
+            position: relative;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80px;
+        }
+
+        .section-title-wrapper::before {
+            content: attr(data-title);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            font-size: 5rem;
+            font-weight: 700;
+            color: rgba(0, 0, 0, 0.06);
+            z-index: 1;
+            white-space: nowrap;
+            letter-spacing: 3px;
+            line-height: 1;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 1rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .cta-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .team-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .team-info {
+            padding: 1.5rem;
+        }
+
+        .team-name {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-position {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .social-icons a {
+            color: var(--text-dark);
+            margin: 0 0.5rem;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: #e8f8f5;
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+
+        .footer {
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .filter-buttons button {
+            background: none;
+            border: none;
+            color: var(--text-dark);
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        .filter-buttons button.active {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Elegat</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <button class="btn btn-primary ms-3">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section" style="margin-top: 70px;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="hero-title">Elegant and creative solutions</h1>
+                    <p class="hero-text">We are team of talented designers making websites with Bootstrap</p>
+                    <button class="btn btn-primary">Get Started</button>
+                    <button class="watch-video-btn">
+                        <i class="fas fa-play"></i> Watch Video
+                    </button>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&h=400&fit=crop"
+                        alt="Team" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-heartbeat"></i></div>
+                        <h5>Lorem Ipsum</h5>
+                        <p class="text-muted">Voluptatum deleniti atque corrupti quos dolores et quas molestias
+                            excepturi</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-crop"></i></div>
+                        <h5>Sed ut perspici</h5>
+                        <p class="text-muted">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                            dolore</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <h5>Magni Dolores</h5>
+                        <p class="text-muted">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title-wrapper" data-title="ABOUT US">
+                <h2 class="section-title">ABOUT</h2>
+            </div>
+            <p class="section-subtitle">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur
+                velit</p>
+
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-5">
+                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=500&h=350&fit=crop"
+                        alt="Team" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-7">
+                    <h4>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h4>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Ullamco laboris nisi ut
+                            aliquip ex ea commodo consequat</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Duis aute irure dolor in
+                            reprehenderit in voluptate velit</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Ullamco laboris nisi ut
+                            aliquip ex ea commodo consequat</li>
+                    </ul>
+                    <p class="text-muted">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <div class="stat-number">232</div>
+                    <div class="stat-label">Clients</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-number">521</div>
+                    <div class="stat-label">Projects</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-number">1453</div>
+                    <div class="stat-label">Hours Of Support</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-number">32</div>
+                    <div class="stat-label">Workers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-light">
+        <div class="container">
+            <div class="section-title-wrapper" data-title="SERVICES">
+                <h2 class="section-title">SERVICES</h2>
+            </div>
+            <p class="section-subtitle">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur
+                velit</p>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <div class="service-icon mx-auto"><i class="fas fa-heartbeat"></i></div>
+                        <h5>Nesciunt Mete</h5>
+                        <p class="text-muted">Provident nihil minus qui consequatur non omnis maiores. Eos accusantium
+                            minus dolores iure perferendis tempore et consequatur.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <div class="service-icon mx-auto"><i class="fas fa-broadcast-tower"></i></div>
+                        <h5>Eosle Commodi</h5>
+                        <p class="text-muted">Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero
+                            corrupti neque eum hic non ut nesciunt dolorem.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <div class="service-icon mx-auto"><i class="fas fa-chart-line"></i></div>
+                        <h5>Ledo Markt</h5>
+                        <p class="text-muted">Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut.
+                            Vel qui id voluptas adipisci eos earum corrupti.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <div class="service-icon mx-auto"><i class="fas fa-shield-alt"></i></div>
+                        <h5>Asperiores Commodit</h5>
+                        <p class="text-muted">Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed
+                            error ea fuga sit provident adipisci neque.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <div class="service-icon mx-auto"><i class="fas fa-folder-open"></i></div>
+                        <h5>Velit Doloremque</h5>
+                        <p class="text-muted">Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam
+                            corporis aut. Sed animi at autem alias eius laborum.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <div class="service-icon mx-auto"><i class="fas fa-comments"></i></div>
+                        <h5>Dolori Architecto</h5>
+                        <p class="text-muted">Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et
+                            debitis iure. Corrupti recusandae ducimus enim.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="section-title-wrapper" data-title="PORTFOLIO">
+                <h2 class="section-title">PORTFOLIO</h2>
+            </div>
+            <p class="section-subtitle">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur
+                velit</p>
+
+            <div class="filter-buttons text-center mb-4">
+                <button class="active">ALL</button>
+                <button>APP</button>
+                <button>PRODUCT</button>
+                <button>BRANDING</button>
+                <button>BOOKS</button>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop"
+                            alt="Portfolio 1">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=300&fit=crop"
+                            alt="Portfolio 2">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop"
+                            alt="Portfolio 3">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?w=400&h=300&fit=crop"
+                            alt="Portfolio 4">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400&h=300&fit=crop"
+                            alt="Portfolio 5">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop"
+                            alt="Portfolio 6">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop"
+                            alt="Portfolio 7">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=300&fit=crop"
+                            alt="Portfolio 8">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1560393464-5c69a73c5770?w=400&h=300&fit=crop"
+                            alt="Portfolio 9">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=400&h=300&fit=crop"
+                            alt="Portfolio 10">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&h=300&fit=crop"
+                            alt="Portfolio 11">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1484788984921-03950022c9ef?w=400&h=300&fit=crop"
+                            alt="Portfolio 12">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="bg-light">
+        <div class="container">
+            <div class="section-title-wrapper" data-title="TESTIMONIALS">
+                <h2 class="section-title">TESTIMONIALS</h2>
+            </div>
+            <p class="section-subtitle">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur
+                velit</p>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos
+                            export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore
+                            quem dolore labore illum veniam."</p>
+                        <div class="testimonial-author">
+                            <img src="https://i.pravatar.cc/100?img=12" alt="Matt Brandon">
+                            <div>
+                                <div class="team-name">Matt Brandon</div>
+                                <div class="team-position">Freelancer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Quis quorum aliqua sint quem legam fore sunt eram irure aliqua
+                            veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat
+                            legam esse veniam culpa fore nisi cillum quid."</p>
+                        <div class="testimonial-author">
+                            <img src="https://i.pravatar.cc/100?img=33" alt="John Larson">
+                            <div>
+                                <div class="team-name">John Larson</div>
+                                <div class="team-position">Entrepreneur</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Proin iaculis purus consequat sem cure digni ssim donec porttitora
+                            entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen
+                            aliquam, risus at semper."</p>
+                        <div class="testimonial-author">
+                            <img src="https://i.pravatar.cc/100?img=27" alt="Saul Goodman">
+                            <div>
+                                <div class="team-name">Saul Goodman</div>
+                                <div class="team-position">Ceo & Founder</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="mb-3">Call To Action</h2>
+            <p class="mb-4">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                id est laborum.</p>
+            <button class="btn btn-outline-light btn-lg" style="border-radius: 25px;">Call To Action</button>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team">
+        <div class="container">
+            <div class="section-title-wrapper" data-title="TEAM">
+                <h2 class="section-title">TEAM</h2>
+            </div>
+            <p class="section-subtitle">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur
+                velit</p>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="team-card">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+                            alt="Walter White">
+                        <div class="team-info">
+                            <div class="team-name">Walter White</div>
+                            <div class="team-position mb-2">Chief Executive Officer</div>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-card">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop"
+                            alt="Sarah Jhonson">
+                        <div class="team-info">
+                            <div class="team-name">Sarah Jhonson</div>
+                            <div class="team-position mb-2">Product Manager</div>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-card">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop"
+                            alt="William Anderson">
+                        <div class="team-info">
+                            <div class="team-name">William Anderson</div>
+                            <div class="team-position mb-2">CTO</div>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-white py-5">
+        <div class="container">
+            <div class="section-title-wrapper" data-title="CONTACT">
+                <h2 class="section-title">CONTACT</h2>
+            </div>
+            <p class="section-subtitle text-center mb-5">
+                Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
+            </p>
+
+            <div class="row g-3 justify-content-center">
+                <!-- Cột trái: Thông tin + bản đồ -->
+                <div class="col-lg-4">
+                    <div class="h-100 p-4 bg-white rounded-3 shadow-sm border d-flex flex-column">
+                        <div class="flex-grow-1">
+                            <div class="d-flex align-items-start mb-4">
+                                <div class="contact-icon me-3"><i class="fas fa-map-marker-alt"></i></div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Address</h6>
+                                    <p class="mb-0">A108 Adam Street, New York, NY 535022</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start mb-4">
+                                <div class="contact-icon me-3"><i class="fas fa-phone"></i></div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Call Us</h6>
+                                    <p class="text-muted mb-0">+1 5589 55488 55</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start mb-4">
+                                <div class="contact-icon me-3"><i class="fas fa-envelope"></i></div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Email Us</h6>
+                                    <p class="text-muted mb-0">info@example.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.184283899633!2d-74.006015!3d40.712775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a1916ab8c29%3A0x5c2e9f1ba8d3e5a9!2sDowntown%20Conference%20Center!5e0!3m2!1svi!2s!4v1698765432100"
+                            width="100%" height="260" style="border:0; border-radius:12px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <!-- Cột phải: Form (label ngoài, khoảng cách đẹp) -->
+                <div class="col-lg-5">
+                    <div
+                        class="h-100 p-4 bg-white rounded-3 shadow-sm border d-flex flex-column justify-content-between">
+                        <form>
+                            <div class="row g-3 mb-3">
+                                <div class="col-6">
+                                    <label class="form-label fw-500">Your Name</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-6">
+                                    <label class="form-label fw-500">Your Email</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-500">Subject</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-500">Message</label>
+                                    <textarea class="form-control" rows="6" required></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Nút cách xa ô Message đẹp -->
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-primary px-5 py-2 rounded-pill">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="bg-light">
+        <div class="container text-center">
+            <h3 class="mb-3">Join Our Newsletter</h3>
+            <p class="text-muted mb-4">Subscribe to our newsletter and receive the latest news about our products and
+                services!</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn btn-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 mb-4">
+                    <h5 class="mb-3">Elegat</h5>
+                    <p class="text-muted mb-2">A108 Adam Street</p>
+                    <p class="text-muted mb-2">New York, NY 535022</p>
+                    <p class="text-muted mb-2"><strong>Phone:</strong> +1 5589 55488 55</p>
+                    <p class="text-muted"><strong>Email:</strong> info@example.com</p>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h6 class="mb-3">Useful Links</h6>
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#about">About us</a>
+                        <a href="#services">Services</a>
+                        <a href="#">Terms of service</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h6 class="mb-3">Our Services</h6>
+                    <div class="footer-links">
+                        <a href="#">Web Design</a>
+                        <a href="#">Web Development</a>
+                        <a href="#">Product Management</a>
+                        <a href="#">Marketing</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h6 class="mb-3">Follow Us</h6>
+                    <p class="text-muted mb-3">Cras fermentum odio eu feugiat lide par naso tierra videa magna derita
+                        valies</p>
+                    <div class="social-icons">
+                        <a href="#" class="btn btn-outline-secondary btn-sm me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-outline-secondary btn-sm me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-secondary btn-sm me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center py-3">
+                <p class="text-muted mb-0">© Copyright <strong>Elegat</strong> All Rights Reserved</p>
+                <p class="text-muted mb-0">Designed by <a href="#" class="text-success">Temlist</a>. Distributed by <a
+                        href="#" class="text-success">P3k</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
