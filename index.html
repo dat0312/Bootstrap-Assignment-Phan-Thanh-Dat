@@ -1,578 +1,718 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elegat - Elegant and Creative Solutions</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elagat</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="container">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Elegat</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+<body>
+  <header>
+    <div class="container pt-3">
+      <nav class="navbar navbar-expand-lg bg-white shadow-sm rounded">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold fs-4" href="#">Elagat</a>
+
+          <a class="btn btn-success rounded-pill ms-auto d-lg-none me-3" href="#" role="button">Get Started</a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarMenu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNavbarMenu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+              <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#team">Team</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Dropdown link 1</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Dropdown link 2</a>
+                  </li>
                 </ul>
-                <button class="btn btn-primary ms-3">Get Started</button>
-            </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+
+            <a class="btn btn-success rounded-pill d-none d-lg-block ms-3" href="#" role="button">Get Started</a>
+            <a class="btn btn-success rounded-pill d-none d-lg-block ms-3" href="ass1.html" role="button">Console
+              Board</a>
+          </div>
         </div>
-    </nav>
+      </nav>
+    </div>
+  </header>
 
-    <section id="home" class="hero-section" style="margin-top: 70px;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="hero-title">Elegant and creative solutions</h1>
-                    <p class="hero-text">We are team of talented designers making websites with Bootstrap</p>
-                    <button class="btn btn-primary">Get Started</button>
-                    <button class="watch-video-btn">
-                        <i class="fas fa-play"></i> Watch Video
-                    </button>
-                </div>
-                <div class="col-lg-6">
-                    <img src="../Boostrap-Ass/images/img12.png"
-                        alt="Team" class="img-fluid rounded">
-                </div>
+  <main class="mt-5">
+    <div class="container">
+      <section class="hero-section">
+        <div id="home" class="row align-items-center">
+          <div class="col-12 col-lg-6 order-2 order-lg-1 mt-4 mt-lg-0">
+            <h1 class="display-5 fw-bold">Elegant and creative solutions</h1>
+            <p class="fs-5 text-muted mt-3">
+              We are team of talented designers making websites with Bootstrap
+            </p>
+            <div class="d-flex align-items-center mt-4">
+              <a href="#about" class="btn btn-success rounded-pill px-4 py-2">Get Started</a>
+              <a href="#" class="btn btn-link text-success text-decoration-none ms-3 fw-bold">
+                <i class="bi bi-play-circle fs-3 me-2 align-middle"></i>
+                Watch Video
+              </a>
             </div>
+          </div>
+
+          <div class="col-12 col-lg-6 order-1 order-lg-2 img-fluid my-5">
+            <img src="./pics/Home.png" alt="Teamwork" class="img-fluid w-100 rounded" />
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="bg-white">
+      <section class="features-section py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-heartbeat"></i></div>
-                        <h5>Lorem Ipsum</h5>
-                        <p class="text-muted">Voluptatum deleniti atque corrupti quos dolores et quas molestias
-                            excepturi</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-crop"></i></div>
-                        <h5>Sed ut perspici</h5>
-                        <p class="text-muted">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                            dolore</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
-                        <h5>Magni Dolores</h5>
-                        <p class="text-muted">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                        </p>
-                    </div>
-                </div>
+          <div class="row g-4">
+            <div class="col-12 col-lg-4">
+              <div class="feature-box p-4 bg-light">
+                <i class="bi bi-activity text-success fs-2 mb-3 d-block"></i>
+                <h3 class="fs-4 fw-bold">Lorem Ipsum</h3>
+                <p class="text-muted">
+                  Voluptatum deleniti atque corrupti quos dolores et quas
+                  molestias excepturi
+                </p>
+              </div>
             </div>
+
+            <div class="col-12 col-lg-4">
+              <div class="feature-box p-4 bg-light">
+                <i class="bi bi-bounding-box text-success fs-2 mb-3 d-block"></i>
+                <h3 class="fs-4 fw-bold">Sed ut perspici</h3>
+                <p class="text-muted">
+                  Duis aute irure dolor in reprehenderit in voluptate velit
+                  esse cillum dolore
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+              <div class="feature-box p-4 bg-light">
+                <i class="bi bi-calendar-event text-success fs-2 mb-3 d-block"></i>
+                <h3 class="fs-4 fw-bold">Magni Dolores</h3>
+                <p class="text-muted">
+                  Excepteur sint occaecat cupidatat non proident, sunt in
+                  culpa qui officia
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- About -->
-    <section id="about">
+      <section class="about-section py-5 section-bg-relative">
         <div class="container">
-            <div class="section-title-wrapper" data-title="ABOUT US">
-                <h2 class="section-title">ABOUT</h2>
-            </div>
-            <p class="section-subtitle">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur
-                velit</p>
-
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-5">
-                    <img src="../Boostrap-Ass/images/img12.png"
-                        alt="Team" class="img-fluid rounded">
-                </div>
-                <div class="col-lg-7">
-                    <h4>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua.</p>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat</li>
-                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Duis aute irure dolor in
-                            reprehenderit in voluptate velit</li>
-                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat</li>
-                    </ul>
-                    <p class="text-muted">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                </div>
+          <div class="row align-items-center position-relative" style="z-index: 2">
+            <div class="col-12 text-center mb-4">
+              <div class="section-title-wrapper" data-title="ABOUT US">
+                <h2 id="about" class="section-title">ABOUT</h2>
+              </div>
+              <p class="fs-5 text-muted">
+                Necessitatibus eius consequatur ex aliquid fuga eum quidem
+                sint consectetur velit
+              </p>
             </div>
 
-            <div class="row text-center">
-                <div class="col-md-3">
-                    <div class="stat-number">232</div>
-                    <div class="stat-label">Clients</div>
-                </div>
-                <div class="col-md-3">
-                    <div class="stat-number">521</div>
-                    <div class="stat-label">Projects</div>
-                </div>
-                <div class="col-md-3">
-                    <div class="stat-number">1453</div>
-                    <div class="stat-label">Hours Of Support</div>
-                </div>
-                <div class="col-md-3">
-                    <div class="stat-number">32</div>
-                    <div class="stat-label">Workers</div>
-                </div>
+            <div class="col-12 col-lg-6 order-2 order-lg-1">
+              <img src="./pics/Home.png" alt="About us" class="img-fluid w-100 rounded" />
             </div>
+
+            <div class="col-12 col-lg-6 order-2 order-lg-2 mt-4 mt-lg-0">
+              <h3 class="fw-bold fs-4">
+                Voluptatem dignissimos provident quasi corporis voluptates sit
+                assumenda.
+              </h3>
+
+              <p class="text-muted fst-italic">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-start mb-2">
+                  <i class="bi bi-check-circle-fill text-success fs-5 me-2"></i>
+                  <span class="text-muted">
+                    Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </span>
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="bi bi-check-circle-fill text-success fs-5 me-2"></i>
+                  <span class="text-muted">
+                    Duis aute irure dolor in reprehenderit in voluptate velit.
+                  </span>
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="bi bi-check-circle-fill text-success fs-5 me-2"></i>
+                  <span class="text-muted">
+                    Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate
+                    trideta storacalaperda mastiro dolore eu fugiat nulla
+                    pariatur.
+                  </span>
+                </li>
+              </ul>
+
+              <p class="text-muted">
+                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                aute irure dolor in reprehenderit in voluptate sunt in culpa
+                qui officia deserunt mollit anim id est laborum non proident
+              </p>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Services -->
-    <section id="services" class="bg-light">
+      <section class="stats-section py-5">
         <div class="container">
-            <div class="section-title-wrapper" data-title="SERVICES">
-                <h2 class="section-title">SERVICES</h2>
+          <div class="row g-4">
+            <div class="col-12 col-lg-3">
+              <div class="stat-box p-4 bg-white text-center">
+                <span class="display-4 fw-bold text-success">232</span>
+                <p class="text-muted">Clients</p>
+              </div>
             </div>
-            <p class="section-subtitle">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur
-                velit</p>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="service-card text-center">
-                        <div class="service-icon mx-auto"><i class="fas fa-heartbeat"></i></div>
-                        <h5>Nesciunt Mete</h5>
-                        <p class="text-muted">Provident nihil minus qui consequatur non omnis maiores. Eos accusantium
-                            minus dolores iure perferendis tempore et consequatur.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card text-center">
-                        <div class="service-icon mx-auto"><i class="fas fa-broadcast-tower"></i></div>
-                        <h5>Eosle Commodi</h5>
-                        <p class="text-muted">Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero
-                            corrupti neque eum hic non ut nesciunt dolorem.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card text-center">
-                        <div class="service-icon mx-auto"><i class="fas fa-chart-line"></i></div>
-                        <h5>Ledo Markt</h5>
-                        <p class="text-muted">Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut.
-                            Vel qui id voluptas adipisci eos earum corrupti.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card text-center">
-                        <div class="service-icon mx-auto"><i class="fas fa-shield-alt"></i></div>
-                        <h5>Asperiores Commodit</h5>
-                        <p class="text-muted">Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed
-                            error ea fuga sit provident adipisci neque.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card text-center">
-                        <div class="service-icon mx-auto"><i class="fas fa-folder-open"></i></div>
-                        <h5>Velit Doloremque</h5>
-                        <p class="text-muted">Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam
-                            corporis aut. Sed animi at autem alias eius laborum.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card text-center">
-                        <div class="service-icon mx-auto"><i class="fas fa-comments"></i></div>
-                        <h5>Dolori Architecto</h5>
-                        <p class="text-muted">Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et
-                            debitis iure. Corrupti recusandae ducimus enim.</p>
-                    </div>
-                </div>
+            <div class="col-12 col-lg-3">
+              <div class="stat-box p-4 bg-white text-center">
+                <span class="display-4 fw-bold text-success">521</span>
+                <p class="text-muted">Projects</p>
+              </div>
             </div>
+
+            <div class="col-12 col-lg-3">
+              <div class="stat-box p-4 bg-white text-center">
+                <span class="display-4 fw-bold text-success">1453</span>
+                <p class="text-muted">Hours Support</p>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-3">
+              <div class="stat-box p-4 bg-white text-center">
+                <span class="display-4 fw-bold text-success">32</span>
+                <p class="text-muted">Workers</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Portfolio -->
-    <section id="portfolio">
+      <section class="services-section py-5 bg-light">
         <div class="container">
-            <div class="section-title-wrapper" data-title="PORTFOLIO">
-                <h2 class="section-title">PORTFOLIO</h2>
+          <div class="row justify-content-center text-center mb-4">
+            <div class="col-lg-8">
+              <p class="text-uppercase fw-bold w-100" style="
+                    font-size: 45px;
+                    letter-spacing: 5px;
+                    color: #e0e0e0;
+                    opacity: 0.4;
+                    z-index: 1;
+                    margin-bottom: -30px;
+                  ">
+                SERVICES
+              </p>
+              <h2 id="services" class="display-10 fw-bold">SERVICES</h2>
+              <p class="fs-5 text-muted">
+                Necessitatibus eius consequatur ex aliquid fuga eum quidem
+                sint consectetur veilt
+              </p>
             </div>
-            <p class="section-subtitle">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur
-                velit</p>
+          </div>
 
-            <div class="filter-buttons text-center mb-4">
-                <button class="active">ALL</button>
-                <button>APP</button>
-                <button>PRODUCT</button>
-                <button>BRANDING</button>
-                <button>BOOKS</button>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="../Boostrap-Ass/images/img16.jpg"
-                            alt="Portfolio 1">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="../Boostrap-Ass/images/img6.jpg"
-                            alt="Portfolio 2">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="../Boostrap-Ass/images/img8.jpg"
-                            alt="Portfolio 3">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="../Boostrap-Ass/images/img11.jpg"
-                            alt="Portfolio 4">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="../Boostrap-Ass/images/img10.jpg"
-                            alt="Portfolio 5">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="../Boostrap-Ass/images/img3.jpg"
-                            alt="Portfolio 6">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="../Boostrap-Ass/images/img14.jpg"
-                            alt="Portfolio 7">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="../Boostrap-Ass/images/img4.jpg"
-                            alt="Portfolio 8">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="../Boostrap-Ass/images/img13.jpg"
-                            alt="Portfolio 9">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="../Boostrap-Ass/images/img17.jpg"
-                            alt="Portfolio 10">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="../Boostrap-Ass/images/img1.jpg"
-                            alt="Portfolio 11">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="../Boostrap-Ass/images/img18.jpg"
-                            alt="Portfolio 12">
-                    </div>
-                </div>
-            </div>
+          <div class="row g-4" id="landing-services-list">
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Testimonials -->
-    <section class="bg-light">
+      <section id="portfolio" class="portfolio py-5">
         <div class="container">
-            <div class="section-title-wrapper" data-title="TESTIMONIALS">
-                <h2 class="section-title">TESTIMONIALS</h2>
+          <div class="container">
+            <div class="section-title text-center position-relative py-5 mb-4">
+              <p class="text-uppercase fw-bold w-100" style="
+                    font-size: 45px;
+                    letter-spacing: 5px;
+                    color: #e0e0e0;
+                    opacity: 0.4;
+                    z-index: 1;
+                    margin-bottom: -30px;
+                  ">
+                Portfolio
+              </p>
+              <h2 class="fw-bold text-uppercase text-dark">Portfolio</h2>
+              <p class="text-muted mt-3">
+                Necessitatibus eius consequatur ex aliquid fuga eum quidem
+                sint consectetur velit
+              </p>
             </div>
-            <p class="section-subtitle">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur
-                velit</p>
+          </div>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos
-                            export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore
-                            quem dolore labore illum veniam."</p>
-                        <div class="testimonial-author">
-                            <img src="../Boostrap-Ass/images/img9.jpg" alt="Matt Brandon">
-                            <div>
-                                <div class="team-name">Matt Brandon</div>
-                                <div class="team-position">Freelancer</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"Quis quorum aliqua sint quem legam fore sunt eram irure aliqua
-                            veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat
-                            legam esse veniam culpa fore nisi cillum quid."</p>
-                        <div class="testimonial-author">
-                            <img src="../Boostrap-Ass/images/img2.jpg" alt="John Larson">
-                            <div>
-                                <div class="team-name">John Larson</div>
-                                <div class="team-position">Entrepreneur</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"Proin iaculis purus consequat sem cure digni ssim donec porttitora
-                            entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen
-                            aliquam, risus at semper."</p>
-                        <div class="testimonial-author">
-                            <img src="../Boostrap-Ass/images/img15.jpg" alt="Saul Goodman">
-                            <div>
-                                <div class="team-name">Saul Goodman</div>
-                                <div class="team-position">Ceo & Founder</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="col-lg-12 d-flex justify-content-center mb-5">
+            <ul id="portfolio-flters" class="list-unstyled d-flex justify-content-center">
+              <li class="mx-1 mx-lg-3 fw-bold text-success">ALL</li>
+              <li class="mx-1 mx-lg-3 fw-bold text-dark">APP</li>
+              <li class="mx-1 mx-lg-3 fw-bold text-dark">PRODUCT</li>
+              <li class="mx-1 mx-lg-3 fw-bold text-dark">BRANDING</li>
+              <li class="mx-1 mx-lg-3 fw-bold text-dark">BOOKS</li>
+            </ul>
+          </div>
+          <div class="row gy-4 portfolio-container">
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-wrap shadow-sm">
+                <img src="./pics/P1.jpg" class="img-fluid" />
+              </div>
             </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-wrap shadow-sm">
+                <img src="./pics/P2.jpg" class="img-fluid" />
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-wrap shadow-sm">
+                <img src="./pics/P3.jpg" class="img-fluid" />
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-wrap shadow-sm">
+                <img src="./pics/P4.jpg" class="img-fluid" />
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-wrap shadow-sm">
+                <img src="./pics/P5.jpg" class="img-fluid" />
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-wrap shadow-sm">
+                <img src="./pics/P6.jpg" class="img-fluid" />
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-wrap shadow-sm">
+                <img src="./pics/P7.jpg" class="img-fluid" />
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-wrap shadow-sm">
+                <img src="./pics/P8.jpg" class="img-fluid" />
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-wrap shadow-sm">
+                <img src="./pics/P9.jpg" class="img-fluid" />
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-wrap shadow-sm">
+                <img src="./pics/P10.jpg" class="img-fluid" />
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-wrap shadow-sm">
+                <img src="./pics/P11.jpg" class="img-fluid" />
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item">
+              <div class="portfolio-wrap shadow-sm">
+                <img src="./pics/P12.jpg" class="img-fluid" />
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- CTA -->
-    <section class="cta-section">
-        <div class="container">
-            <h2 class="mb-3">Call To Action</h2>
-            <p class="mb-4">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                id est laborum.</p>
-            <button class="btn btn-outline-light btn-lg" style="border-radius: 25px;">Call To Action</button>
+      <section class="py-5" style="background-color: #f9f9f9">
+        <div class="container text-center py-5">
+          <div class="position-relative mb-5">
+            <p class="text-uppercase fw-bold w-100" style="
+                  font-size: 48px;
+                  letter-spacing: 5px;
+                  color: #e0e0e0;
+                  opacity: 0.4;
+                  z-index: 1;
+                  margin-bottom: -30px;
+                ">
+              TESTIMONIALS
+            </p>
+            <h2 class="text-uppercase fw-bold" style="font-size: 2rem; color: #495057; margin-top: 0">
+              TESTIMONIALS
+            </h2>
+          </div>
+
+          <p class="mb-5" style="color: #6c757d">
+            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+            consectetur velit
+          </p>
+
+          <div class="row justify-content-center g-4 pb-5" id="landing-testimonials-list">
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Team -->
-    <section id="team">
+      <section class="call-to-action py-5 text-white text-center" style="background-color: #28a745">
         <div class="container">
-            <div class="section-title-wrapper" data-title="TEAM">
-                <h2 class="section-title">TEAM</h2>
-            </div>
-            <p class="section-subtitle">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur
-                velit</p>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="team-card">
-                        <img src="../Boostrap-Ass/images/img7.jpg"
-                            alt="Walter White">
-                        <div class="team-info">
-                            <div class="team-name">Walter White</div>
-                            <div class="team-position mb-2">Chief Executive Officer</div>
-                            <div class="social-icons">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="team-card">
-                        <img src="../Boostrap-Ass/images/img19.jpg"
-                            alt="Sarah Jhonson">
-                        <div class="team-info">
-                            <div class="team-name">Sarah Jhonson</div>
-                            <div class="team-position mb-2">Product Manager</div>
-                            <div class="social-icons">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="team-card">
-                        <img src="../Boostrap-Ass/images/img5.jpg"
-                            alt="William Anderson">
-                        <div class="team-info">
-                            <div class="team-name">William Anderson</div>
-                            <div class="team-position mb-2">CTO</div>
-                            <div class="social-icons">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <h2 class="display-5 fw-bold mb-3">Call To Action</h2>
+          <p class="fs-5 mb-4 px-lg-5">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          </p>
+          <a href="#" class="btn btn-outline-light rounded-pill px-4 py-2">Call To Action</a>
         </div>
-    </section>
+      </section>
 
-    <!-- Contact -->
-    <section id="contact" class="bg-white py-5">
-        <div class="container">
-            <div class="section-title-wrapper" data-title="CONTACT">
-                <h2 class="section-title">CONTACT</h2>
-            </div>
-            <p class="section-subtitle text-center mb-5">
-                Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
+      <section class="py-5 bg-white">
+        <div id="team" class="container">
+          <div class="text-center mb-5 position-relative">
+            <p class="text-uppercase fw-bold w-100" style="
+                  font-size: 48px;
+                  letter-spacing: 5px;
+                  color: #e0e0e0;
+                  opacity: 0.4;
+                  z-index: 1;
+                  margin-bottom: -30px;
+                ">
+              TEAM
             </p>
 
-            <div class="row g-3 justify-content-center">
-                <div class="col-lg-4">
-                    <div class="h-100 p-4 bg-white rounded-3 shadow-sm border d-flex flex-column">
-                        <div class="flex-grow-1">
-                            <div class="d-flex align-items-start mb-4">
-                                <div class="contact-icon me-3"><i class="fas fa-map-marker-alt"></i></div>
-                                <div>
-                                    <h6 class="fw-bold mb-1">Address</h6>
-                                    <p class="mb-0">A108 Adam Street, New York, NY 535022</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start mb-4">
-                                <div class="contact-icon me-3"><i class="fas fa-phone"></i></div>
-                                <div>
-                                    <h6 class="fw-bold mb-1">Call Us</h6>
-                                    <p class="text-muted mb-0">+1 5589 55488 55</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start mb-4">
-                                <div class="contact-icon me-3"><i class="fas fa-envelope"></i></div>
-                                <div>
-                                    <h6 class="fw-bold mb-1">Email Us</h6>
-                                    <p class="text-muted mb-0">info@example.com</p>
-                                </div>
-                            </div>
-                        </div>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.184283899633!2d-74.006015!3d40.712775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a1916ab8c29%3A0x5c2e9f1ba8d3e5a9!2sDowntown%20Conference%20Center!5e0!3m2!1svi!2s!4v1698765432100"
-                            width="100%" height="260" style="border:0; border-radius:12px;" allowfullscreen=""
-                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
+            <h2 class="display-10 fw-bold text-dark mt-0 mb-3 position-relative" style="z-index: 2; font-size: 27px">
+              TEAM
+            </h2>
 
-                <div class="col-lg-5">
-                    <div
-                        class="h-100 p-4 bg-white rounded-3 shadow-sm border d-flex flex-column justify-content-between">
-                        <form>
-                            <div class="row g-3 mb-3">
-                                <div class="col-6">
-                                    <label class="form-label fw-500">Your Name</label>
-                                    <input type="text" class="form-control" required>
-                                </div>
-                                <div class="col-6">
-                                    <label class="form-label fw-500">Your Email</label>
-                                    <input type="email" class="form-control" required>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label fw-500">Subject</label>
-                                    <input type="text" class="form-control" required>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label fw-500">Message</label>
-                                    <textarea class="form-control" rows="6" required></textarea>
-                                </div>
-                            </div>
-                            <div class="text-center mt-4">
-                                <button type="submit" class="btn btn-primary px-5 py-2 rounded-pill">
-                                    Send Message
-                                </button>
-                            </div>
-                        </form>
+            <p class="fs-5 text-muted mx-auto" style="max-width: 700px">
+              Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+              consectetur velit
+            </p>
+          </div>
+
+          <div class="row justify-content-center g-5">
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="position-relative">
+                <img src="./pics/Te1.png" alt="Walter White" class="img-fluid w-100" />
+
+                <div class="position-absolute start-0 end-0 bg-white px-2 py-3 shadow-sm"
+                  style="bottom: -43px; margin: 0 10px">
+                  <div class="d-flex justify-content-between align-items-end">
+                    <div class="text-start">
+                      <h5 class="fw-bold mb-0 text-dark">Walter White</h5>
+                      <hr class="my-1 border-secondary" style="
+                            width: 55px;
+                            opacity: 0.5;
+                            margin-left: 0 !important;
+                          " />
+                      <p class="small text-muted mb-0">
+                        Chief Executive Officer
+                      </p>
                     </div>
+
+                    <div class="d-flex">
+                      <a href="#" class="text-muted ms-2"><i class="fab fa-x-twitter"></i></a>
+                      <a href="#" class="text-muted ms-2"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#" class="text-muted ms-2"><i class="fab fa-instagram"></i></a>
+                      <a href="#" class="text-muted ms-2"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
-    </section>
 
-    <section class="bg-light">
-        <div class="container text-center">
-            <h3 class="mb-3">Join Our Newsletter</h3>
-            <p class="text-muted mb-4">Subscribe to our newsletter and receive the latest news about our products and
-                services!</p>
-            <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="position-relative">
+                <img src="./pics/Te2.png" alt="Sarah Jhonson" class="img-fluid w-100" />
+
+                <div class="position-absolute start-0 end-0 bg-white px-2 py-3 shadow-sm"
+                  style="bottom: -43px; margin: 0 10px">
+                  <div class="d-flex justify-content-between align-items-end">
+                    <div class="text-start">
+                      <h5 class="fw-bold mb-0 text-dark">Sarah Jhonson</h5>
+                      <hr class="my-1 border-secondary" style="
+                            width: 50px;
+                            opacity: 0.5;
+                            margin-left: 0 !important;
+                          " />
+                      <p class="small text-muted mb-0">Product Manager</p>
+                    </div>
+                    <div class="d-flex">
+                      <a href="#" class="text-muted ms-2"><i class="fab fa-x-twitter"></i></a>
+                      <a href="#" class="text-muted ms-2"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#" class="text-muted ms-2"><i class="fab fa-instagram"></i></a>
+                      <a href="#" class="text-muted ms-2"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="position-relative">
+                <img src="./pics/Te3.png" alt="William Anderson" class="img-fluid w-100" />
+
+                <div class="position-absolute start-0 end-0 bg-white px-2 py-3 shadow-sm"
+                  style="bottom: -43px; margin: 0 10px">
+                  <div class="d-flex justify-content-between align-items-end">
+                    <div class="text-start">
+                      <h5 class="fw-bold mb-0 text-dark">William Anderson</h5>
+                      <hr class="my-1 border-secondary" style="
+                            width: 70px;
+                            opacity: 0.5;
+                            margin-left: 0 !important;
+                          " />
+                      <p class="small text-muted mb-0">CTO</p>
+                    </div>
+                    <div class="d-flex">
+                      <a href="#" class="text-muted ms-2"><i class="fab fa-x-twitter"></i></a>
+                      <a href="#" class="text-muted ms-2"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#" class="text-muted ms-2"><i class="fab fa-instagram"></i></a>
+                      <a href="#" class="text-muted ms-2"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section id="contact" class="contact py-5" style="background-color: #f8f9fa">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="text-uppercase fw-bold w-100" style="
+                font-size: 48px;
+                letter-spacing: 5px;
+                color: #e0e0e0;
+                opacity: 0.4;
+                z-index: 1;
+                margin-bottom: -30px;
+              ">
+            CONTACT
+          </p>
+          <h2 class="display-10 fw-bold">CONTACT</h2>
+          <p class="text-muted small">
+            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+            consectetur velit
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-5">
+            <div class="info-container p-4 bg-white shadow-sm border h-100">
+              <div class="info-item d-flex align-items-start mb-4">
+                <i class="bi bi-geo-alt text-success fs-4 me-3"></i>
+                <div>
+                  <strong>Address</strong><br />
+                  <span class="text-muted small">A108 Adam Street, New York, NY 535022</span>
+                </div>
+              </div>
+
+              <div class="info-item d-flex align-items-start mb-4">
+                <i class="bi bi-telephone text-success fs-4 me-3"></i>
+                <div>
+                  <strong>Call Us</strong><br />
+                  <span class="text-muted small">+1 5589 55488 55</span>
+                </div>
+              </div>
+
+              <div class="info-item d-flex align-items-start mb-4">
+                <i class="bi bi-envelope text-success fs-4 me-3"></i>
+                <div>
+                  <strong>Email Us</strong><br />
+                  <span class="text-muted small">info@example.com</span>
+                </div>
+              </div>
+              <div class="rounded shadow-sm overflow-hidden" style="height: 250px">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12215.228959883068!2d-74.01401098819831!3d40.70592745566887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown.%20Conference%20Center!5e0!3m2!1svi!2s!4v1763391101527!5m2!1svi!2s"
+                  width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form class="p-4 bg-white shadow-sm border h-100 d-flex flex-column">
+              <div class="row g-3">
                 <div class="col-md-6">
-                    <div class="input-group">
-                        <input type="email" class="form-control" placeholder="Enter your email">
-                        <button class="btn btn-primary">Subscribe</button>
-                    </div>
+                  <label for="name" class="form-label small text-muted">Your Name</label>
+                  <input type="text" class="form-control" id="name" required />
                 </div>
-            </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label small text-muted">Your Email</label>
+                  <input type="email" class="form-control" id="email" required />
+                </div>
+                <div class="col-12 mt-3">
+                  <label for="subject" class="form-label small text-muted">Subject</label>
+                  <input type="text" class="form-control" id="subject" />
+                </div>
+                <div class="col-12 mt-3">
+                  <label for="message" class="form-label small text-muted">Message</label>
+                  <textarea class="form-control" id="message" rows="5" required></textarea>
+                </div>
+              </div>
+              <div class="text-center mt-auto pt-3">
+                <button type="submit" class="btn btn-success rounded-pill px-5 py-2">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 mb-4">
-                    <h5 class="mb-3">Elegat</h5>
-                    <p class="text-muted mb-2">A108 Adam Street</p>
-                    <p class="text-muted mb-2">New York, NY 535022</p>
-                    <p class="text-muted mb-2"><strong>Phone:</strong> +1 5589 55488 55</p>
-                    <p class="text-muted"><strong>Email:</strong> info@example.com</p>
-                </div>
-                <div class="col-lg-3 mb-4">
-                    <h6 class="mb-3">Useful Links</h6>
-                    <div class="footer-links">
-                        <a href="#home">Home</a>
-                        <a href="#about">About us</a>
-                        <a href="#services">Services</a>
-                        <a href="#">Terms of service</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 mb-4">
-                    <h6 class="mb-3">Our Services</h6>
-                    <div class="footer-links">
-                        <a href="#">Web Design</a>
-                        <a href="#">Web Development</a>
-                        <a href="#">Product Management</a>
-                        <a href="#">Marketing</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 mb-4">
-                    <h6 class="mb-3">Follow Us</h6>
-                    <p class="text-muted mb-3">Cras fermentum odio eu feugiat lide par naso tierra videa magna derita
-                        valies</p>
-                    <div class="social-icons">
-                        <a href="#" class="btn btn-outline-secondary btn-sm me-2"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="btn btn-outline-secondary btn-sm me-2"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="btn btn-outline-secondary btn-sm me-2"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="text-center py-3">
-                <p class="text-muted mb-0">© Copyright <strong>Elegat</strong> All Rights Reserved</p>
-                <p class="text-muted mb-0">Designed by <a href="#" class="text-success">Temlist</a>. Distributed by <a
-                        href="#" class="text-success">P3k</a></p>
-            </div>
+  <footer class="bg-white pt-5">
+    <div class="container">
+      <div class="text-center my-5 py-4 border-top" style="background-color: #44444408">
+        <h2 class="display-10 fw-bold text-secondary mb-3">
+          Join Our Newsletter
+        </h2>
+        <p class="text-muted small mb-4">
+          Subscribe to our newsletter and receive the latest news about our
+          products and services!
+        </p>
+
+        <div class="position-relative d-inline-block" style="max-width: 420px; width: 100%">
+          <input type="email" class="form-control rounded-pill" required style="
+                height: 56px;
+                padding-right: 170px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+              " />
+          <button
+            class="btn text-white fw-semibold position-absolute top-0 end-0 h-100 d-flex align-items-center justify-content-center rounded-pill m-0"
+            style="
+                background: linear-gradient(135deg, #48bb78, #38a169);
+                width: 156px;
+                height: calc(100%);
+                margin: 6px;
+                padding: 0;
+                font-size: 1rem;
+                border: none;
+              " onmouseover="this.style.background='linear-gradient(135deg, #38a169, #2f855a)'"
+            onmouseout="this.style.background='linear-gradient(135deg, #48bb78, #38a169)'">
+            Subscribe
+          </button>
         </div>
-    </footer>
+      </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+      <div class="row g-4 pb-4 border-bottom">
+        <div class="col-md-3">
+          <h5 class="fw-bold mb-3">Elegat</h5>
+          <p class="small text-muted">
+            A108 Adam Street<br />
+            New York, NY 535022
+          </p>
+          <p class="small text-muted">
+            <strong>Phone:</strong> +1 5589 55488 55<br />
+            <strong>Email:</strong> info@example.com
+          </p>
+        </div>
+        <div class="col-md-3">
+          <h5 class="fw-bold mb-3">Useful Links</h5>
+          <ul class="list-unstyled small">
+            <li>
+              <a href="#" class="text-muted text-decoration-none">Home</a>
+            </li>
+            <li>
+              <a href="#" class="text-muted text-decoration-none">About us</a>
+            </li>
+            <li>
+              <a href="#" class="text-muted text-decoration-none">Services</a>
+            </li>
+            <li>
+              <a href="#" class="text-muted text-decoration-none">Terms of service</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5 class="fw-bold mb-3">Our Services</h5>
+          <ul class="list-unstyled small">
+            <li>
+              <a href="#" class="text-muted text-decoration-none">Web Design</a>
+            </li>
+            <li>
+              <a href="#" class="text-muted text-decoration-none">Web Development</a>
+            </li>
+            <li>
+              <a href="#" class="text-muted text-decoration-none">Product Management</a>
+            </li>
+            <li>
+              <a href="#" class="text-muted text-decoration-none">Marketing</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5 class="fw-bold mb-3">Follow Us</h5>
+          <p class="text-muted small">
+            Cras fermentum odio eu feugiat lide par naso tierra videa magna
+            derita valies
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-muted"><i class="bi bi-twitter fs-5"></i></a>
+            <a href="#" class="text-muted"><i class="bi bi-facebook fs-5"></i></a>
+            <a href="#" class="text-muted"><i class="bi bi-instagram fs-5"></i></a>
+            <a href="#" class="text-muted"><i class="bi bi-linkedin fs-5"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center py-3">
+        <p class="text-muted mb-0">© Copyright <strong>Elegat</strong> All Rights Reserved</p>
+        <p class="text-muted mb-0">Designed by <a href="#" class="text-success">Temlist</a>. Distributed by <a href="#"
+            class="text-success">P3k</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="ass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
